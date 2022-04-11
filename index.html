@@ -19,10 +19,19 @@
              0% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
             100% { transform: translateX(-50%) translateY(-50%) rotate(360deg); }
             }
+            .hide{
+                z-index: -10;
+            }
         </style>
     </head>
     <body>
-        <iframe width="560" height="30" src="https://www.youtube.com/embed/feA64wXhbjo" title="YouTube video player" loop="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <audio id="player" autoplay loop muted controls><source src="Shooting Stars.mp3" type="audio/mp3"></audio>
+        <script>
+            var vid = document.getElementById("player");
+            vid.volume = 0.5;
+            vid.muted = false;
+        </script>
+        </iframe> 
         <img class="spin" src="proto.png" />
     </body>
 </html>
